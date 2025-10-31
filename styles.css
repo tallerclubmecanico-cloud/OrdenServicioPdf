@@ -167,3 +167,77 @@ body {
 .cliente-seccion .field-row label {
     width: 100px;
 }
+
+/* --- Estilos de la Sección de Mantenimiento (Tabla) --- */
+
+.mantenimiento-tabla {
+    padding: 0 30px 30px 30px; /* Misma alineación que el contenido principal */
+}
+
+/* Encabezado de la Tabla */
+.tabla-header {
+    display: flex;
+    background-color: #FFD700; /* Fondo amarillo */
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.tabla-header div {
+    padding: 10px;
+    text-align: left;
+}
+
+.col-mantenimiento {
+    flex-grow: 1; /* Permite que ocupe el mayor espacio posible */
+}
+
+.col-precio {
+    width: 150px; /* Ancho fijo para la columna de precio */
+    text-align: center !important;
+}
+
+.col-foto {
+    width: 100px; /* Ancho fijo para la columna de foto */
+    text-align: center !important;
+}
+
+/* Filas de Contenido */
+.tabla-row {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #FFD700; /* Separador superior amarillo */
+    border-bottom: 1px solid #FFD700; /* Separador inferior amarillo */
+    margin-bottom: -1px; /* Para que los bordes se superpongan y se vean como una línea gruesa */
+    padding: 10px 0;
+}
+
+.tabla-row:last-child {
+    margin-bottom: 0;
+}
+
+.tabla-row div {
+    padding: 10px;
+    text-align: left;
+    height: 100%; /* Asegura que la celda cubra el alto de la imagen */
+    display: flex;
+    align-items: center;
+}
+
+.tabla-row .col-precio {
+    justify-content: center; /* Centrar el precio horizontalmente */
+    font-size: 1.1em;
+}
+
+.tabla-row .col-foto {
+    justify-content: center;
+    padding: 0;
+}
+
+.tabla-row .col-foto img {
+    width: 80px; /* Tamaño de la imagen como en el diseño */
+    height: 80px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}

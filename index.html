@@ -3,75 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orden de Servicio - Club Mecánico</title>
-    <link rel="stylesheet" href="styles.css"> </head>
+    <title>Orden de Trabajo | Club Mecánico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-    <div class="document-container">
-        <header class="header-top-yellow">
-            <div class="club-info">
-                <div class="club-logo"></div>
-                <div class="club-name">CLUB MECÁNICO</div>
-                <div class="club-slogan">TALLER AUTOMOTRIZ MULTIMARCA</div>
+    <div class="orden-trabajo">
+        
+        <header class="header">
+            <div class="header-info">
+                <div class="field-group">
+                    <label>ORDEN:</label>
+                    <div class="field-value">1</div>
+                </div>
+                <div class="field-group">
+                    <label>FECHA:</label>
+                    <div class="field-value">16/03/2030</div>
+                </div>
+            </div>
+            
+            <div class="logo-area">
+                <div class="logo-container">
+                    <div class="logo-icon">🚗</div>
+                    <h1>CLUB MECÁNICO</h1>
+                    <p>TALLER AUTOMOTRIZ MULTIMARCA</p>
+                </div>
             </div>
         </header>
 
-        <div class="main-content">
-            <div class="left-section">
-                <div class="order-info">
-                    <div class="field-row">
-                        <label for="orden">ORDEN:</label>
-                        <input type="text" id="orden" value="1">
-                    </div>
-                    <div class="field-row">
-                        <label for="fecha">FECHA:</label>
-                        <input type="text" id="fecha" value="16/03/2030">
-                    </div>
+        <main class="content">
+            <section class="datos-seccion vehiculo-seccion">
+                <h2>DATOS DEL VEHÍCULO</h2>
+                
+                <div class="field-row">
+                    <label for="placa">PLACA:</label>
+                    <div class="field-input">PYX70</div>
                 </div>
-            </div>
+                <div class="field-row">
+                    <label for="marca">MARCA:</label>
+                    <div class="field-input">KIA</div>
+                </div>
+                <div class="field-row">
+                    <label for="modelo">MODELO:</label>
+                    <div class="field-input">RIO</div>
+                </div>
+                <div class="field-row">
+                    <label for="anio">AÑO:</label>
+                    <div class="field-input">2010</div>
+                </div>
+                <div class="field-row">
+                    <label for="km">KM:</label>
+                    <div class="field-input">150000</div>
+                </div>
+            </section>
 
-            <div class="data-sections-container">
-                <div class="data-section vehicle-data">
-                    <h3>DATOS DEL VEHÍCULO</h3>
-                    <div class="field-row">
-                        <label for="placa">PLACA:</label>
-                        <input type="text" id="placa" value="PBX3456">
-                    </div>
-                    <div class="field-row">
-                        <label for="marca">MARCA:</label>
-                        <input type="text" id="marca" value="KIA">
-                    </div>
-                    <div class="field-row">
-                        <label for="modelo">MODELO:</label>
-                        <input type="text" id="modelo" value="16/03/2030">
-                    </div>
-                    <div class="field-row">
-                        <label for="año">AÑO:</label>
-                        <input type="text" id="año" value="16/03/2030">
-                    </div>
+            <section class="datos-seccion cliente-seccion">
+                <h2>DATOS DEL CLIENTE</h2>
+                
+                <div class="field-row">
+                    <label for="nombre">NOMBRE:</label>
+                    <div class="field-input">PATRICIO ALVAREZ</div>
                 </div>
+                <div class="field-row">
+                    <label for="telefono">TELÉFONO:</label>
+                    <div class="field-input">0984452198</div>
+                </div>
+                <div class="field-row">
+                    <label for="direccion">DIRECCIÓN:</label>
+                    <div class="field-input">PUEMBO</div>
+                </div>
+                <div class="field-row">
+                    <label for="correo">CORREO:</label>
+                    <div class="field-input">pato@gmail.com</div>
+                </div>
+            </section>
 
-                <div class="data-section client-data">
-                    <h3>DATOS DEL CLIENTE</h3>
-                    <div class="field-row">
-                        <label for="nombre">NOMBRE:</label>
-                        <input type="text" id="nombre" value="16/03/2030">
-                    </div>
-                    <div class="field-row">
-                        <label for="telefono">TELÉFONO:</label>
-                        <input type="text" id="telefono" value="16/03/2030">
-                    </div>
-                    <div class="field-row">
-                        <label for="direccion">DIRECCIÓN:</label>
-                        <input type="text" id="direccion" value="16/03/2030">
-                    </div>
-                    <div class="field-row">
-                        <label for="correo">CORREO:</label>
-                        <input type="text" id="correo" value="16/03/2030">
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
     </div>
 
 </body>

@@ -1,163 +1,169 @@
-/* Estilos generales*/
+/* Estilos Generales y Reseteo Básico */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 }
 
-.document-container {
-    width: 800px; /* Ancho aproximado del documento */
+.orden-trabajo {
+    width: 800px; /* Ancho máximo similar al diseño de la imagen */
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Encabezado Superior (Amarillo) --- */
-.header-top-yellow {
-    background-color: #ffcc00; /* Color amarillo del encabezado */
-    padding: 10px 0;
-    text-align: right;
-    height: 90px; /* Altura para el logo */
-    position: relative; /* Para posicionar la información del club */
+/* --- Estilos del Encabezado (HEADER) --- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden; /* Necesario para el corte diagonal */
 }
 
-.club-info {
+.header-info {
+    padding: 30px;
+    background-color: white;
+    /* Crear un área diagonal a la izquierda */
+    clip-path: polygon(0 0, 70% 0, 85% 100%, 0 100%);
+    width: 60%;
+    position: relative;
+    z-index: 2; /* Asegura que esté sobre la esquina amarilla del content */
+}
+
+.field-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.field-group label {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333;
+    width: 80px; /* Ancho fijo para las etiquetas de ORDEN/FECHA */
+}
+
+.field-group .field-value {
+    border: 2px solid #333; /* Borde oscuro */
+    padding: 4px 10px;
+    background-color: white;
+    width: 150px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1em;
+    height: 1.2em; /* Altura del campo de texto */
+}
+
+/* --- Estilos del Área del Logo (Derecha) --- */
+
+.logo-area {
+    background-color: #FFD700; /* Fondo amarillo */
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #f7a400; /* Un tono más oscuro para el fondo del logo */
+    bottom: 0;
+    z-index: 1;
+    /* Crear la forma diagonal del lado derecho */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.logo-container {
+    padding-left: 10%; /* Ajuste para centrar visualmente dentro del área cortada */
+}
+
+.logo-icon {
+    font-size: 3em;
+    margin-bottom: -10px;
+}
+
+.logo-area h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
     color: black;
-    padding: 10px 20px;
-    text-align: center;
-    min-width: 250px;
-    height: 100%;
+}
+
+.logo-area p {
+    font-size: 0.8em;
+    margin: 0;
+    color: #333;
+    font-weight: 400;
+}
+
+/* --- Estilos del Contenido Principal (MAIN) --- */
+
+.content {
+    display: flex;
+    padding: 30px;
+}
+
+.datos-seccion {
+    width: 50%;
+    padding-right: 20px;
     box-sizing: border-box;
 }
 
-.club-logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.cliente-seccion {
+    padding-left: 20px;
+    border-left: 1px solid #eee; /* Separador sutil si se desea */
 }
-.club-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
-}
-.club-slogan {
-    font-size: 10px;
-    text-transform: uppercase;
+
+.datos-seccion h2 {
     color: #333;
-}
-
-
-/* --- Contenido Principal (Debajo del encabezado) --- */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    padding: 0 40px 40px 40px;
-    position: relative;
-}
-
-/* Sección de Orden y Fecha (Izquierda Superior) */
-.left-section {
-    position: absolute;
-    top: -40px; /* Sube la sección para que la parte amarilla se superponga */
-    left: 0;
-    width: 400px; /* Ancho de la sección amarilla */
-    z-index: 10;
-    padding-left: 40px;
-}
-
-/* El efecto de esquina inclinada (clip-path o transform skew) */
-.left-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; /* Altura de la sección amarilla superior */
-    background-color: #ffcc00; /* Color amarillo */
-    /* Crea la forma inclinada usando clip-path */
-    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-    z-index: -1;
-}
-
-.order-info {
-    padding-top: 15px; /* Ajusta el contenido dentro de la forma */
-    color: black;
-    position: relative;
-    z-index: 20;
-}
-
-/* Fila de Campos (ORDEN y FECHA) */
-.order-info .field-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.order-info label {
-    width: 80px; /* Ancho fijo para las etiquetas de ORDEN y FECHA */
-    text-align: left;
-    margin-right: 10px;
-}
-
-.order-info input {
-    border: 1px solid #333;
-    background-color: white;
-    padding: 5px;
-    width: 150px;
-    border-color: #f7a400; /* Borde del input */
-    box-shadow: 0 0 0 1px #f7a400;
-}
-
-
-/* Contenedor de las dos columnas de datos */
-.data-sections-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px; /* Deja espacio para la sección de Orden/Fecha */
-    position: relative;
-    z-index: 5;
-}
-
-.data-section {
-    width: 48%; /* Casi la mitad para cada sección */
-}
-
-.data-section h3 {
+    font-size: 1.2em;
+    font-weight: 700;
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 2px solid #ffcc00; /* Línea de separación bajo el título */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #FFD700; /* Subrayado amarillo */
+    display: inline-block;
     padding-bottom: 5px;
 }
 
-/* Fila de Campos (PLACA, NOMBRE, etc.) */
-.data-section .field-row {
+.field-row {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.data-section label {
-    min-width: 100px; /* Ancho fijo para las etiquetas de los datos */
-    text-align: left;
-    margin-right: 10px;
+.field-row label {
+    font-size: 1em;
+    font-weight: 700;
+    color: #333;
+    width: 100px; /* Ancho fijo para las etiquetas */
+    flex-shrink: 0; /* Evita que la etiqueta se encoja */
 }
 
-.data-section input {
+.field-input {
     flex-grow: 1;
-    border: 1px solid #333;
-    background-color: #f7a4001a; /* Fondo muy ligero para el input */
-    padding: 5px;
-    border-color: #f7a400; /* Borde del input */
-    box-shadow: 0 0 0 1px #f7a400;
+    border: 2px solid #FFD700; /* Borde amarillo como en la imagen */
+    padding: 4px 10px;
+    background-color: white;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1em;
+    height: 1.2em; /* Altura del campo de texto */
+    color: black;
+}
+
+/* Ajuste para que las secciones se vean como en la imagen */
+.vehiculo-seccion .field-row label {
+    width: 80px;
+}
+
+.cliente-seccion .field-row label {
+    width: 100px;
 }

@@ -239,5 +239,5 @@ body {
     width: 80px; /* Tamaño de la imagen como en el diseño */
     height: 80px;
     object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    display: block; /* Elimina espacio extra debajo de la imagen*/
 }

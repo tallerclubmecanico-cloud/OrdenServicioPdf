@@ -113,6 +113,28 @@
                 </div>
     
             </section>
-        </div>
+
+        <section class="repuestos-tabla">
+            
+            <div class="tabla-header">
+                <div class="col-repuestos">REPUESTOS E INSUMOS</div>
+                <div class="col-cantidad">CANTIDAD</div>
+                <div class="col-precio">PRECIO</div>
+                <div class="col-foto">FOTO</div>
+            </div>
+            
+            <<Start: [Related Repuestos]>> 
+                <div class="tabla-row">
+                    <div class="col-repuestos"><<[Repuesto_Nombre]>></div> 
+                    <div class="col-cantidad"><<[Cantidad]>> <<[Unidad]>></div> 
+                    <div class="col-precio"><<[Precio_Repuesto]>></div> 
+                    <div class="col-foto">
+                        <<[Imagen_Repuesto]>> 
+                    </div>
+                </div>
+            <<End>>
+
+        </section>
+    </div>
 </body>
 </html>

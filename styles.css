@@ -9,7 +9,7 @@ body {
 }
 
 .orden-trabajo {
-    width: 800px; /* Ancho máximo similar al diseño de la imagen */
+    width: 800px; /* Ancho máximo similar al diseño de la imagen*/
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -21,7 +21,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    overflow: hidden; /* Necesario para el corte diagonal */
+    overflow: hidden; /* Necesario para el corte diagonal*/
 }
 
 .header-info {

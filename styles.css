@@ -399,3 +399,111 @@ body {
     object-fit: cover;
     display: block;
 }
+
+/* --- Estilos de la Sección de Pie de Página (Footer Area) --- */
+
+.footer-area {
+    padding: 0 30px 30px 30px;
+}
+
+/* Bloque de Totales */
+
+.totales-container {
+    width: 350px; /* Ancho fijo para el bloque de totales */
+    margin-left: auto; /* Alinea a la derecha */
+    margin-bottom: 30px;
+    border: 1px solid #FFD700;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    font-size: 1.1em;
+}
+
+.total-row:nth-child(even) {
+    background-color: #f9f9f9; /* Rayado sutil si se desea */
+}
+
+.total-final {
+    background-color: #FFD700; /* Fondo amarillo para el total final */
+    font-weight: 700;
+    color: black;
+    padding: 12px 15px;
+    font-size: 1.2em;
+}
+
+.total-label {
+    font-weight: 700;
+}
+
+.total-value {
+    font-weight: 400;
+}
+
+/* Bloque de Términos y Condiciones */
+
+.terminos-condiciones {
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.terminos-condiciones h3 {
+    color: #004d99; /* Color azul oscuro similar al diseño */
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.terminos-condiciones ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terminos-condiciones li {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.aceptacion-texto {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+/* Bloque de Firmas */
+
+.firmas-container {
+    border: 1px solid #FFD700;
+}
+
+.firmas-header {
+    display: flex;
+    background-color: #FFD700;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.firmas-header div {
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.firmas-body {
+    display: flex;
+}
+
+.firmas-body div {
+    height: 100px; /* Espacio para la firma */
+    width: 50%;
+    border: 1px solid #eee; /* Separador sutil */
+    box-sizing: border-box;
+}
+
+.firmas-body .col-responsable {
+    border-right: none;
+}

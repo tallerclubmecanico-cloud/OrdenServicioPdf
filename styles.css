@@ -417,7 +417,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 8px 15px;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .total-row:nth-child(even) {

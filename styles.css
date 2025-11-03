@@ -406,13 +406,11 @@ body {
     padding: 0 30px 30px 30px;
 }
 
-/* Bloque de Totales */
 .totales-container {
-    width: 100%; /* Ocupar todo el ancho disponible */
-    max-width: 100%; /* Evita limitarlo a 350px */
-    margin: 0 auto 30px auto; /* Centrado y con margen inferior */
+    width: calc(100% - 60px); /* Igual que las tablas con padding lateral de 30px */
+    margin: 0 30px 30px 30px; /* Coincide visualmente con el padding de las tablas */
     border: 1px solid #FFD700;
-    box-sizing: border-box; /* Evita que el padding afecte el ancho */
+    box-sizing: border-box;
 }
 
 .total-row {

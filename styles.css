@@ -168,6 +168,39 @@ body {
     width: 100px;
 }
 
+.observaciones-cliente {
+    padding: 0 30px 30px 30px; /* Misma alineación que el contenido principal */
+}
+
+/* Encabezado de las observaciones */
+.observaciones-header {
+    display: flex;
+    background-color: #FFD700; /* Fondo amarillo */
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.observaciones-header div {
+    padding: 10px;
+    text-align: left;
+}
+
+.col-observaciones {
+    flex-grow: 1; /* Permite que ocupe el mayor espacio posible */
+}
+
+/* Filas de Contenido observaciones */
+.observaciones {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #FFD700; /* Separador superior amarillo */
+    border-bottom: 1px solid #FFD700; /* Separador inferior amarillo */
+    margin-bottom: -1px; /* Para que los bordes se superpongan y se vean como una línea gruesa */
+    padding: 10px 0;
+}
+
 /* --- Estilos de la Sección de Mantenimiento (Tabla) --- */
 
 .mantenimiento-tabla {

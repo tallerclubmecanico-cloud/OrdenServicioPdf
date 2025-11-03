@@ -417,7 +417,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 8px 15px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .total-row:nth-child(even) {
@@ -429,7 +429,7 @@ body {
     font-weight: 700;
     color: black;
     padding: 12px 15px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .total-label {

@@ -407,12 +407,12 @@ body {
 }
 
 /* Bloque de Totales */
-
 .totales-container {
-    width: 350px; /* Ancho fijo para el bloque de totales */
-    margin-left: auto; /* Alinea a la derecha */
-    margin-bottom: 30px;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 100%; /* Evita limitarlo a 350px */
+    margin: 0 auto 30px auto; /* Centrado y con margen inferior */
     border: 1px solid #FFD700;
+    box-sizing: border-box; /* Evita que el padding afecte el ancho */
 }
 
 .total-row {
